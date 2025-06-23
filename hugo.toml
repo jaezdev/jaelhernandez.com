@@ -1,6 +1,6 @@
 
 disableKinds = ["RSS", "sitemap", "robotsTXT"]
-baseURL = 'https://jaelhernandez.com/'
+baseURL = '/'
 languageCode = ''
 title = 'Jael Hernandez'
 
