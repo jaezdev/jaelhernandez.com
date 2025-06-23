@@ -7,6 +7,11 @@
     
     {{ $styles := resources.Get "scss/main.scss" | toCSS | minify }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}">
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
 </head>
 <body>
     
