@@ -7,7 +7,7 @@
             <div class="links-grid-brutalist">
                 {{ with .Site.Params.social }}
                 {{ range . }}
-                  <a href="{{ .url }}" target="_blank" rel="noopener" class="brutalist-link">{{ .name | title }}</a>
+                  <a href="{{ .url }}" target="_blank" rel="noopener" class="brutalist-link" data-i18n="{{ .name }}">{{ .name | title }}</a>
                 {{ end }}
                 {{ end }}
             </div>

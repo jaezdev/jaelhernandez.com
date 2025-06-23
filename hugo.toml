@@ -14,7 +14,7 @@ url = "https://instagram.com/jaez.jpg"
 
 [[params.social]]
 name = "videos"
-url = " https://www.youtube.com/@alejandrojaelhernandez "
+url = " https://www.youtube.com/@alejandrojaelhernandez"
 
 
 [[params.social]]
@@ -27,4 +27,4 @@ url = "https://games.jaelhernandez.com"
 
 [[params.social]]
 name = "programming"
-url = "dev.jaelhernandez.com"
+url = "https://dev.jaelhernandez.com"
