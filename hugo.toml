@@ -1,0 +1,30 @@
+
+disableKinds = ["RSS", "sitemap", "robotsTXT"]
+baseURL = 'https://jaelhernandez.com/'
+languageCode = ''
+title = 'Jael Hernandez'
+
+[taxonomies]
+tag = ""
+category = ""
+
+[[params.social]]
+name = "photos"
+url = "https://instagram.com/jaez.jpg"
+
+[[params.social]]
+name = "videos"
+url = " https://www.youtube.com/@alejandrojaelhernandez "
+
+
+[[params.social]]
+name = "articles"
+url = "https://blog.jaelhernandez.com"
+
+[[params.social]]
+name = "videogames"
+url = "https://games.jaelhernandez.com"
+
+[[params.social]]
+name = "programming"
+url = "dev.jaelhernandez.com"

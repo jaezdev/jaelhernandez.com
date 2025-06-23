@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }}</title>
+    
+    {{ $styles := resources.Get "scss/main.scss" | toCSS | minify }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}">
+</head>
+<body>
+    
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    
+    {{ $js := resources.Get "js/main.js" }}
+    {{ $js = $js | js.Build (dict 
+        "targetPath" "js/bundle.js" 
+        "minify" hugo.IsProduction
+        "format" "esm"
+    ) }}
+    {{ if hugo.IsProduction }}
+        {{ $js = $js | fingerprint }}
+    {{ end }}
+    
+    <script src="{{ $js.Permalink }}" 
+            {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}>
+    </script>
+</body>
+</html>

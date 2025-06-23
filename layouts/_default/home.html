@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="bio-brutalist">
+    <div class="bio-content-brutalist">
+        <img src="/images/profile.jpg" alt="Alejandro Hernandez" class="bio-profile-img" />
+        <h1 class="bio-title-brutalist">Alejandro Hernandez</h1>
+        <div class="bio-links-brutalist">
+            <div class="links-grid-brutalist">
+                {{ with .Site.Params.social }}
+                {{ range . }}
+                  <a href="{{ .url }}" target="_blank" rel="noopener" class="brutalist-link">{{ .name | title }}</a>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
